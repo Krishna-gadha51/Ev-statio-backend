@@ -47,7 +47,13 @@ const Booking = mongoose.model("Bookings",
 
 
 
+app.get("/view-book",async(req,res)=>{
 
+    const bookings = await Booking.find()
+
+    res.json(bookings)
+
+})
 
 
 
